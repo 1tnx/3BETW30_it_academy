@@ -1,0 +1,44 @@
+th, td {
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+
+th {
+    text-align: left;
+}
+
+table {
+    padding-top: 10px;
+}
+
+body {
+    font-family: Verdana;
+    width: 700px;
+}
+
+.button {
+    background-color: darkgray;
+    color: darkgreen;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: gray;
+    font: bold;
+}
+
+.button1 {
+    font-size: larger;
+}
+
+
+h1, h2, h3 {
+    color: midnightblue;
+}
+
+h1 {
+    text-align: center;
+}

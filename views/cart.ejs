@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/style.css">
+        <title>IT Academy</title>
+    </head>
+    <body>
+
+        <h1>IT Academy</h1>
+
+        <h2>Panier</h2>
+        
+        <a href="/confirm"><button class="button button1">Finaliser l'inscription</button></a>
+        <a href="/"><button class="button button1">Retourner au catalogue de formation</button></a>
+    
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prix</th>
+                <th>Début</th>
+                <th>Fin</th>
+                <th></th>
+            </tr>
+            <% if (cartItems.length != 0) { %>
+            <% for(let i=0; i<cartItems.length;i++){ %>
+                <tr>
+                    <td><%= cartItems[i].id %></td>
+                    <td><%= cartItems[i].name %></td>
+                    <td><%= cartItems[i].price %></td>
+                    <td><%= cartItems[i].start %></td>
+                    <td><%= cartItems[i].end %></td>
+                    <td><form action="/remove/<%= cartItems[i].id %>" method="post"><button class="button" type="submit">Supprimer</button></form></td>
+                </tr>
+            <% } %>
+            <% } %>
+        </table>
+
+    </body>
+</html>
+
+<script>
+    
+</script>

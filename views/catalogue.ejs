@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/style.css">
+        <title>IT Academy</title>
+    </head>
+    <body>
+
+        <h1>IT Academy</h1>
+
+        <h2>Formations disponibles</h2>
+        
+        <a href="/cart"><button class="button button1">Voir le panier</button></a>
+        <a href="/login"><button class="button button1">Se connecter</button></a>
+
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prix</th>
+                <th>Début</th>
+                <th>Fin</th>
+                <th></th>
+            </tr>
+            <% for(let i=0; i<catalogueItems.length;i++){ %>
+                <tr>
+                    <td><%= catalogueItems[i].id %></td>
+                    <td><%= catalogueItems[i].name %></td>
+                    <td><%= catalogueItems[i].price %></td>
+                    <td><%= catalogueItems[i].start %></td>
+                    <td><%= catalogueItems[i].end %></td>
+                    <td><form action="/add/<%= catalogueItems[i].id %>" method="post"><button class="button" type="submit">S'inscrire</button></form></td>
+                </tr>
+             <% } %>
+        </table>
+        
+    </body>
+</html>
